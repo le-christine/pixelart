@@ -31,18 +31,37 @@ createTwentyDivs();
 /**
  * Adds an event listener to each square div
  */
+
+/*
 function addEventListenerToSquares() {
   squareObj = document.getElementsByClassName('square');
   for (let i=0; i<squareObj.length; i++) {
     squareObj[i].addEventListener('click', setGreen);
   }
 }
+*/
 
 /**
  * Changes selected element's background color to green
  */
+/*
 function setGreen() {
   this.style.backgroundColor = "green";
+}
+
+addEventListenerToSquares();
+*/
+
+function addEventListenerToSquares() {
+  squareObj = document.getElementsByClassName('square');
+  for (let i=0; i<squareObj.length; i++) {
+    squareObj[i].addEventListener('click', setSelectedColor);
+  }
+}
+
+function setSelectedColor() {
+  let newColor = document.querySelector('#color-field').value;
+  this.style.backgroundColor = newColor;
 }
 
 addEventListenerToSquares();
