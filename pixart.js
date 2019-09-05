@@ -15,18 +15,18 @@ function changeBrushBox (e) {
 }
 
 /**
- * Creates twenty divs with square class and appends each to body
- *
+ * Creates divs with square class and appends each to body
+ * @param  {integer} [how many divs you want]
  */
-function createTwentyDivs () {
-  for (let i=0; i<20; i++) {
+function createDivs(num) {
+  for (let i=0; i<num; i++) {
     let newDiv = document.createElement('div');
     newDiv.classList = "square";
     document.querySelector('body').appendChild(newDiv);
   }
 }
 
-createTwentyDivs();
+createDivs(8000);
 
 /**
  * Adds an event listener to each square div
@@ -55,7 +55,7 @@ addEventListenerToSquares();
 function addEventListenerToSquares() {
   squareObj = document.getElementsByClassName('square');
   for (let i=0; i<squareObj.length; i++) {
-    squareObj[i].addEventListener('click', setSelectedColor);
+    squareObj[i].addEventListener('mouseover', setSelectedColor);
   }
 }
 
