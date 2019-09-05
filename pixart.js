@@ -28,6 +28,9 @@ function createTwentyDivs () {
 
 createTwentyDivs();
 
+/**
+ * Adds an event listener to each square div
+ */
 function addEventListenerToSquares() {
   squareObj = document.getElementsByClassName('square');
   for (let i=0; i<squareObj.length; i++) {
@@ -35,6 +38,9 @@ function addEventListenerToSquares() {
   }
 }
 
+/**
+ * Changes selected element's background color to green
+ */
 function setGreen() {
   this.style.backgroundColor = "green";
 }
