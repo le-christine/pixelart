@@ -27,3 +27,16 @@ function createTwentyDivs () {
 }
 
 createTwentyDivs();
+
+function addEventListenerToSquares() {
+  squareObj = document.getElementsByClassName('square');
+  for (let i=0; i<squareObj.length; i++) {
+    squareObj[i].addEventListener('click', setGreen);
+  }
+}
+
+function setGreen() {
+  this.style.backgroundColor = "green";
+}
+
+addEventListenerToSquares();
